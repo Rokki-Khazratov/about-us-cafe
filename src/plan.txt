@@ -26,7 +26,7 @@ MODELS:
         location = char 
         longitude = char
         latitude = char
-        
+
         short_description
         description
 
@@ -41,5 +41,26 @@ MODELS:
         CV = filefied blanck=true
 
 
+
+
+endpoints:
+
+categories/
+categories/<int:pk>/
+
+products/
+products/<int:pk>/
+
+job/
+job/<int:pk>/
+
+vacancies/
+vacancies/<int:pk>/
+
+applications/
+applications/<int:pk>/
+
+
+socialmedias/
 
 
