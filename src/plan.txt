@@ -1,0 +1,41 @@
+MODELS:
+    category:
+        name
+
+    product:
+        cateogory(many-to-many)
+        name 
+        description
+        price
+        image
+        kcal = 659 - 858
+
+    social-media :
+        icon
+        link
+
+
+    job:
+        name
+
+
+    vacancy:
+        job = fkey
+        salary 
+        location
+        short_description
+        description
+
+
+    application:
+        full_name
+        phone_number
+        job = fkey
+        gender = choisesfield
+
+        description  blanck=true
+        CV = filefied blanck=true
+
+
+
+
