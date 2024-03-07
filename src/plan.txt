@@ -22,7 +22,11 @@ MODELS:
     vacancy:
         job = fkey
         salary 
-        location
+
+        location = char 
+        longitude = char
+        latitude = char
+        
         short_description
         description
 
