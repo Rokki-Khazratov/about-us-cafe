@@ -4,7 +4,7 @@ from .models import Category, Product,Job, Social_media, Vacancy, Aplication
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ['name','title']
+        fields = ['name','info']
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -22,7 +22,7 @@ class JobSerializer(serializers.ModelSerializer):
 class Social_mediaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Social_media
-        fields = ['name']
+        fields = ['name','image']
 
 
 class VacancySerializer(serializers.ModelSerializer):
@@ -32,6 +32,11 @@ class VacancySerializer(serializers.ModelSerializer):
 
 
 class AplicationSerializer(serializers.ModelSerializer):
+    job_name = serializers.SerializerMethodField()
+
+    def get_job_name(self,obj):
+        return obj.job.job
+    
     class Meta:
         model = Aplication
-        fields = ['jobs','full_name', 'phone', 'job', 'description', 'cv', 'status']
+        fields = ['full_name', 'phone_number', 'job_name', 'description', 'cv', 'status']

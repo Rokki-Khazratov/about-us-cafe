@@ -12,8 +12,8 @@ urlpatterns = [
     path('job/<int:pk>/', JobDetailAPIView.as_view(),name='job-detail'),
 
     path('social_media/', Social_mediaListAPIView.as_view(),name='social_media-list'),
-    path('social_media/<int:pk>/', Social_mediaDetailAPIView.as_view(),name='social_media-detail'),
-
+    # path('social_media/<int:pk>/', Social_mediaDetailAPIView.as_view(),name='social_media-detail'),
+    
     path('vacancy/', VacancyListAPIView.as_view(),name='vacancy-list'),
     path('vacancy/<int:pk>/', VacancyDetailAPIView.as_view(),name='vacancy-detail'),
 

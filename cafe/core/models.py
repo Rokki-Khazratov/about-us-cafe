@@ -2,9 +2,9 @@ from django.db import models as m
 
 # Create your models here.
 
-class Category(m.Manager):
+class Category(m.Model):
     name = m.CharField(max_length = 250)
-    title = m.TextField()
+    info = m.TextField()
     def __str__(self):
         return self.name
 
@@ -26,7 +26,7 @@ class Job(m.Model):
 
 class Social_media(m.Model):
     name = m.CharField(max_length = 250)
-
+    image = m.ImageField()
     def __str__(self):
         return self.name
 

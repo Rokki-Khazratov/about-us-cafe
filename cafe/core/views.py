@@ -28,9 +28,6 @@ class ProductDetailAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = ProductSerializer
 
 
-
-
-
 class JobListAPIView(ListCreateAPIView):
     queryset = Job.objects.all()
     serializer_class = JobSerializer
@@ -38,9 +35,6 @@ class JobListAPIView(ListCreateAPIView):
 class JobDetailAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Job.objects.all()
     serializer_class = JobSerializer
-
-
-
 
 
 class Social_mediaListAPIView(ListCreateAPIView):
@@ -52,9 +46,6 @@ class Social_mediaDetailAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = Social_mediaSerializer
 
 
-
-
-
 class VacancyListAPIView(ListCreateAPIView):
     queryset = Vacancy.objects.all()
     serializer_class = VacancySerializer
@@ -62,8 +53,6 @@ class VacancyListAPIView(ListCreateAPIView):
 class VacancyDetailAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Vacancy.objects.all()
     serializer_class = VacancySerializer
-
-
 
 
 
