@@ -41,7 +41,7 @@ class Vacancy(m.Model):
     description = m.TextField(blank  = True)
 
     def __str__(self):
-        return self.salary  
+        return self.latitude 
     
 
 class Aplication(m.Model):
@@ -55,5 +55,6 @@ class Aplication(m.Model):
     description = m.TextField(blank  = True)
     cv  = m.FileField()
     status = m.IntegerField(choices=APLICATION_CHOISES_FIELD, default=1)
+
     def __str__(self):
         return self.full_name
