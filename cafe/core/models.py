@@ -13,7 +13,7 @@ class Product(m.Model):
     name = m.CharField(max_length = 250)
     description = m.TextField() 
     price = m.IntegerField()
-    image = m.ImageField()
+    image = m.ImageField(upload_to='rv/')
 
     def __str__(self):
         return self.name
@@ -26,7 +26,7 @@ class Job(m.Model):
 
 class Social_media(m.Model):
     name = m.CharField(max_length = 250)
-    image = m.ImageField()
+    image = m.ImageField(upload_to='category/')
     def __str__(self):
         return self.name
 
